@@ -1,0 +1,29 @@
+project(*SensorIMU) : dcpsexe, dcps_rtps_udp {
+  exename   = sensor_imu
+  TypeSupport_Files {
+    dron.idl
+  }
+  Source_Files {
+    sensor_imu.cpp
+  }
+}
+
+project(*SensorENV) : dcpsexe, dcps_rtps_udp {
+  exename   = sensor_env
+  TypeSupport_Files {
+    dron.idl
+  }
+  Source_Files {
+    sensor_env.cpp
+  }
+}
+
+project(*FlightController) : dcpsexe, dcps_rtps_udp {
+  exename   = flight_controller
+  TypeSupport_Files {
+    dron.idl
+  }
+  Source_Files {
+    flight_controller.cpp
+  }
+}

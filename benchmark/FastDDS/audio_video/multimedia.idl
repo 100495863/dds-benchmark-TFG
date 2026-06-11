@@ -1,0 +1,18 @@
+module Streaming {
+    // Estructura para el Frame de Video (Pesado: ~2MB)
+    struct VideoFrame {
+        unsigned long frame_id;
+        unsigned long long timestamp;
+        unsigned short width;
+        unsigned short height;
+        sequence<octet> pixels;
+    };
+
+    // Estructura para el Fragmento de Audio (Ligero: ~1KB)
+    struct AudioFrame {
+        unsigned long frame_id;
+        unsigned long long timestamp;
+        unsigned short sample_rate;
+        sequence<octet> samples;
+    };
+};

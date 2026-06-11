@@ -1,0 +1,9 @@
+module Benchmark
+{
+  struct Msg
+  {
+    unsigned long seq;
+    unsigned long long timestamp_ns;
+    sequence<octet> payload;
+  };
+};

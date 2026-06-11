@@ -1,0 +1,11 @@
+project: dcpsexe, dcps_tcp {
+  exename   = streaming_node
+  
+  TypeSupport_Files {
+    multimedia.idl
+  }
+
+  Source_Files {
+    streaming_node.cpp
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <participant profile_name="no_shm_participant" is_default_profile="true">
+        <rtps>
+            <useBuiltinTransports>false</useBuiltinTransports>
+            <userTransports>
+                <transport_id>udp_transport</transport_id>
+                <type>UDPv4</type>
+            </userTransports>
+            <properties>
+                <property>
+                    <name>fastdds.intraprocess_delivery</name>
+                    <value>OFF</value>
+                </property>
+            </properties>
+        </rtps>
+    </participant>
+    
+    <data_writer profile_name="no_datasharing_writer" is_default_profile="true">
+        <data_sharing>
+            <kind>OFF</kind>
+        </data_sharing>
+    </data_writer>
+    
+    <data_reader profile_name="no_datasharing_reader" is_default_profile="true">
+        <data_sharing>
+            <kind>OFF</kind>
+        </data_sharing>
+    </data_reader>
+</profiles>

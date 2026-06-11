@@ -1,0 +1,24 @@
+module Icarus {
+    struct IMUData {
+        string sensor_id;
+        unsigned long long timestamp_ns;
+        float accel_x;
+        float accel_y;
+        float accel_z;
+        float gyro_x;
+        float gyro_y;
+        float gyro_z;
+    };
+    #pragma keylist IMUData sensor_id
+
+    struct SystemStatus {
+        string system_id;
+        unsigned long long timestamp_ns;
+        float battery_level;
+        boolean gps_valid;
+        double latitude;
+        double longitude;
+        float altitude;
+    };
+    #pragma keylist SystemStatus system_id
+};

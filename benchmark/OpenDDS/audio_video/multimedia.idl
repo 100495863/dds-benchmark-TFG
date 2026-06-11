@@ -1,0 +1,18 @@
+module Streaming {
+    struct VideoFrame {
+        unsigned long frame_id;
+        unsigned long long timestamp;
+        unsigned short width;
+        unsigned short height;
+        sequence<octet> pixels;
+    };
+    #pragma DCPS_DATA_TYPE "Streaming::VideoFrame"
+
+    struct AudioFrame {
+        unsigned long frame_id;
+        unsigned long long timestamp;
+        unsigned short sample_rate;
+        sequence<octet> samples;
+    };
+    #pragma DCPS_DATA_TYPE "Streaming::AudioFrame"
+};

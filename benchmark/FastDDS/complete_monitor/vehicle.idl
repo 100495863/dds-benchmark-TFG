@@ -1,0 +1,27 @@
+module V2X {
+    // 1. Mensaje para Tormenta de Descubrimiento y Enjambre
+    struct VehicleTelemetry {
+        @key string vehicle_id;
+        unsigned long long timestamp_ns;
+        double latitude;
+        double longitude;
+        float speed;
+        float heading;
+    };
+
+    // 2. Mensaje Crítico para pruebas de QoS
+    struct EmergencyBrakeAlert {
+        @key string alert_id;
+        string sender_id;
+        unsigned long long timestamp_ns;
+        boolean is_active;
+    };
+
+    // 3. Mensaje Gigante para pruebas de Throughput y Fragmentación
+    struct LiDARPointCloud {
+        @key string sensor_id;
+        unsigned long long timestamp_ns;
+        unsigned long sequence_number;
+        sequence<octet> data; // Arreglo dinámico de bytes
+    };
+};

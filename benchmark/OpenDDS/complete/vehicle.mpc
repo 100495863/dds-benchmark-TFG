@@ -1,0 +1,9 @@
+project(*VehicleNode) : dcpsexe, dcps_rtps_udp {
+  exename   = vehicle_node
+  TypeSupport_Files {
+    vehicle.idl
+  }
+  Source_Files {
+    vehicle_node.cpp
+  }
+}

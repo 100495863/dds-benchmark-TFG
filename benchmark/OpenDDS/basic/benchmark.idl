@@ -1,0 +1,9 @@
+module Benchmark
+{
+  struct Msg
+  {
+    unsigned long long seq;
+    unsigned long long timestamp_ns;
+  };
+};
+#pragma DCPS_DATA_TYPE "Benchmark::Msg"

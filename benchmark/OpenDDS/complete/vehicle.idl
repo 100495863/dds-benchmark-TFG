@@ -1,0 +1,32 @@
+module V2X {
+  // 1. Mensaje para Tormenta de Descubrimiento y Enjambre
+  struct VehicleTelemetry {
+    string vehicle_id;
+    unsigned long long timestamp_ns;
+    double latitude;
+    double longitude;
+    float speed;
+    float heading;
+  };
+  #pragma DCPS_DATA_TYPE "V2X::VehicleTelemetry"
+  #pragma DCPS_DATA_KEY "V2X::VehicleTelemetry vehicle_id"
+
+  // 2. Mensaje Crítico para pruebas de QoS y Caos de Red
+  struct EmergencyBrakeAlert {
+    string alert_id;
+    string sender_id;
+    unsigned long long timestamp_ns;
+    boolean is_active;
+  };
+  #pragma DCPS_DATA_TYPE "V2X::EmergencyBrakeAlert"
+
+  // 3. Mensaje Gigante para pruebas de Throughput y Fragmentación
+  struct LiDARPointCloud {
+    string sensor_id;
+    unsigned long long timestamp_ns;
+    unsigned long sequence_number;
+    sequence<octet> data; // Arreglo dinámico de bytes
+  };
+  #pragma DCPS_DATA_TYPE "V2X::LiDARPointCloud"
+  #pragma DCPS_DATA_KEY "V2X::LiDARPointCloud sensor_id"
+};

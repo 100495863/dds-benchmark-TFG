@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Domain id="any">
+        <General>
+            <Interfaces>
+                <NetworkInterface name="enp179s0f0"/>
+            </Interfaces>
+            <AllowMulticast>true</AllowMulticast>
+        </General>
+    </Domain>
+</CycloneDDS>

@@ -1,0 +1,30 @@
+module V2X {
+    // 1. Mensaje para Tormenta de Descubrimiento y Enjambre (Pequeño y constante)
+    struct VehicleTelemetry {
+        string vehicle_id;
+        unsigned long long timestamp_ns;
+        double latitude;
+        double longitude;
+        float speed;
+        float heading;
+    };
+    #pragma keylist VehicleTelemetry vehicle_id
+
+    // 2. Mensaje Crítico para pruebas de QoS y Caos de Red (Muy pequeño, alta prioridad)
+    struct EmergencyBrakeAlert {
+        string alert_id;
+        string sender_id;
+        unsigned long long timestamp_ns;
+        boolean is_active;
+    };
+    #pragma keylist EmergencyBrakeAlert
+
+    // 3. Mensaje Gigante para pruebas de Throughput y Fragmentación (2MB - 10MB)
+    struct LiDARPointCloud {
+        string sensor_id;
+        unsigned long long timestamp_ns;
+        unsigned long sequence_number;
+        sequence<octet> data; // Arreglo dinámico de bytes
+    };
+    #pragma keylist LiDARPointCloud sensor_id
+};

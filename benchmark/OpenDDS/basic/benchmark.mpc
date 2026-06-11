@@ -1,0 +1,23 @@
+project(*Publisher) : dcpsexe, dcps_tcp {
+  exename   = publisher
+  
+  TypeSupport_Files {
+    benchmark.idl
+  }
+
+  Source_Files {
+    publisher.cpp
+  }
+}
+
+project(*Subscriber) : dcpsexe, dcps_tcp {
+  exename   = subscriber
+  
+  TypeSupport_Files {
+    benchmark.idl
+  }
+
+  Source_Files {
+    subscriber.cpp
+  }
+}
