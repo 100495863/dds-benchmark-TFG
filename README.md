@@ -29,7 +29,7 @@ The repository is modularly divided into execution nodes (C/C++) and orchestrati
 * **Python 3.8+** (Required for the orchestration scripts)
 * Python packages: `psutil` (for hardware monitoring)
 
-## 🛠️ Build Instructions
+## Build Instructions
 
 The project uses CMake for cross-platform compilation. To build the C++ nodes for all the DDS implementations, run the following commands from the root of the repository:
 
