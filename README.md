@@ -8,16 +8,16 @@ This project was developed as a Bachelor's Thesis (Trabajo Fin de Grado) in Comp
 **Tutor:** Francisco Javier García Blas  
 **Institution:** Universidad Carlos III de Madrid (UC3M) 
 
-## 📂 Project Structure
+## Project Structure
 
 The repository is modularly divided into execution nodes (C/C++) and orchestration/monitoring scripts (Python):
 
 * `common/`: Python scripts designed for local loopback evaluation.
 * `cluster/`: Distributed scripts for advanced network fragmentation and multimedia streaming tests in a physical cluster environment.
   
-## ⚙️ Prerequisites and Dependencies
+## Prerequisites and Dependencies
 
-⚠️ **IMPORTANT:** In order to successfully compile and link the C++ communication nodes, **you must have the following three DDS implementations installed** and properly configured in your system's environment variables:
+**IMPORTANT:** In order to successfully compile and link the C++ communication nodes, **you must have the following three DDS implementations installed** and properly configured in your system's environment variables:
 
 1. **[eProsima Fast DDS](https://fast-dds.docs.eprosima.com/)** (v2.x)
 2. **[Eclipse CycloneDDS](https://cyclonedds.io/)**
